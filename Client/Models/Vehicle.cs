@@ -30,4 +30,9 @@ public class Vehicle(string manufacturer, string model)
         get {return _modelYear;}
         set {_modelYear = value;}
     }
+
+    public override string ToString()
+    {
+       return $"Tillverkare: {Manufacturer} - Model: {Model}";
+    }
 }
