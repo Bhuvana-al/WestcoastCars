@@ -1,13 +1,14 @@
 ﻿namespace Client.Models;
 
-public class Vehicle
+public class Vehicle(string manufacturer, string model)
 {
     //skapa privata fält for tillverkare och modell
 
     //privata fälten (backing fields)
     //Detta är vårt data => information
-    private string _manufacturer;
-    private string _model;
+    private string _manufacturer = manufacturer;
+    private string _model = model;
+    private int _modelYear;
 
     //Beteende => Logik, manipulera värt data => tillstånd
     //skapa egenskaper som laser och skriver varden till de privata falten
@@ -24,4 +25,9 @@ public class Vehicle
         set {_model = value;}
     }
 
+    public int ModelYear
+    {
+        get {return _modelYear;}
+        set {_modelYear = value;}
+    }
 }

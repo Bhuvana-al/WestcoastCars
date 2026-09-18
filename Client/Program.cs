@@ -1,4 +1,5 @@
-﻿using Client.Models;
+﻿using System.Formats.Asn1;
+using Client.Models;
 namespace Client;
 
 class Program
@@ -8,20 +9,24 @@ class Program
     {
         //korrekt syntax for att instansiera ett objekt..
         //volvo ar ett objekt av typen vehicle...
-        Vehicle volvo = new Vehicle();
+        Vehicle volvo = new Vehicle(manufacturer:"Volvo", "EX30");
 
-        volvo.Manufacturer = "Volvo"; //Anrop sker nu till set i egenskapen
-        volvo.Model = "EX30";
+        //volvo.Manufacturer = "Volvo"; //Anrop sker nu till set i egenskapen
+        //volvo.Model = "EX30";
+        volvo.ModelYear = 2025;
 
         string model = volvo.Model; //anrop get
-        Console.WriteLine(volvo.Manufacturer); 
-        Console.WriteLine(volvo.Model); 
+        Console.WriteLine(volvo.Manufacturer); //anrop get
+        Console.WriteLine(volvo.Model); //Anrop get
+        Console.WriteLine(volvo.ModelYear);
 
-        Vehicle x = new Vehicle();
-        x.Manufacturer = "Ford";
-        x.Model = "Fusion";
+        Vehicle ford = new Vehicle("Ford", "Fusion");
+        //ford.Manufacturer = "Ford";
+        //ford.Model = "Fusion";
+        ford.ModelYear = 2005;
 
-        Console.WriteLine(x.Manufacturer);
-        Console.WriteLine(x.Model);
+        Console.WriteLine(ford.Manufacturer); //Anrop get
+        Console.WriteLine(ford.Model); //Anrop get
+        Console.WriteLine(ford.ModelYear);
     }
 }
