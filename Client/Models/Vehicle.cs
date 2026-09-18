@@ -8,7 +8,7 @@ public class Vehicle(string manufacturer, string model)
     //Detta är vårt data => information
     private string _manufacturer = manufacturer;
     private string _model = model;
-    private int _modelYear;
+    //private int _modelYear;
 
     //Beteende => Logik, manipulera värt data => tillstånd
     //skapa egenskaper som laser och skriver varden till de privata falten
@@ -25,11 +25,11 @@ public class Vehicle(string manufacturer, string model)
         set {_model = value;}
     }
 
-    public int ModelYear
-    {
-        get {return _modelYear;}
-        set {_modelYear = value;}
-    }
+    //public int ModelYear
+    //{
+    //    get {return _modelYear;}
+    //    set {_modelYear = value;}
+    //}
 
     public override string ToString()
     {
