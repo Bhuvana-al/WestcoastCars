@@ -33,6 +33,6 @@ public class Vehicle(string manufacturer, string model)
 
     public override string ToString()
     {
-       return $"Tillverkare: {Manufacturer} - Model: {Model}";
+       return $"Tillverkare: {Manufacturer} - Modell: {Model}";
     }
 }

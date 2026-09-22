@@ -9,14 +9,38 @@ class Program
     {
         
         Car volvo = new Car("Volvo", "XC90", "ABC123");
+        volvo.ModelYear = 2024;
         volvo.Color = "Black";
         volvo.Mileage = 105000;
         volvo.Engine = new Engine{FuelType="Diesel", HorsePower=200, Volume=2.0};
 
-        CarPark carPark = new CarPark();
-        carPark.vehicles.Add(volvo);
+        Car peugeot = new Car("Peugeot", "3008", "DEF38P");
+        peugeot.ModelYear= 2025;
+        peugeot.Color = "Blue";
+        peugeot.Mileage = 50000;
+        peugeot.Engine = new Engine{FuelType="Petrol"};
 
-        Console.WriteLine(volvo.ToString());
+        CarPark carPark = new CarPark();
+        
+        carPark.vehicles.Add(volvo);
+        carPark.vehicles.Add(peugeot);
+
+        Bike ElCycle = new Bike("Crescent","Elina");
+        ElCycle.CycleType = "Electric";
+        ElCycle.ModelYear = 2026;
+        ElCycle.NumberOfGears = 7;
+        ElCycle.WheelSize = "28 inches";
+
+        Bike DamCycle = new Bike("Nishiki", "Pro SLD");
+        DamCycle.CycleType = "Manual";
+        DamCycle.ModelYear = 2023;
+        DamCycle.NumberOfGears = 0;
+        DamCycle.WheelSize = "27 inches";
+
+        carPark.vehicles.Add(ElCycle);
+        carPark.vehicles.Add(DamCycle);
+
+        //Console.WriteLine(volvo.ToString());
         Console.WriteLine("-------------------------------");
 
         foreach (var item in carPark.vehicles)
