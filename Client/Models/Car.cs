@@ -12,7 +12,7 @@ public class Car (string make, string model, string regNo):Vehicle(make, model)
     
     public override string ToString()
     {
-       //return $"Tillverkare: {Manufacturer} - Model: {Model} - Modelyear: {ModelYear} - RegNo: {RegNo} - Color: {Color} - Mileage: {Mileage} - Engine: {Engine}";
-       return $"Tillverkare: {Manufacturer} - Modell: {Model} - RegNo: {RegNo} - Årsmodell: {ModelYear} - Mileage: {Mileage} - Engine: {Engine}";
+       //return $"Tillverkare: {Manufacturer} - Modell: {Model} - RegNo: {RegNo} - Årsmodell: {ModelYear} - Färg: {Color} - Antal körda mil: {Mileage} - Motor: {Engine}";
+       return $"Tillverkare: {Manufacturer} - Modell: {Model} - RegNo: {RegNo} - Årsmodell: {ModelYear} - Antal körda mil: {Mileage} - Motor: {Engine}";
     }
 }

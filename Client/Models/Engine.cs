@@ -8,7 +8,7 @@ public class Engine
 
     public override string ToString()
     {
-        //return $"Hästkrafter: {HorsePower} - Volume: {Volume} - Bränsletyp: {FuelType}";
+        //return $"Hästkrafter: {HorsePower} - Volym: {Volume} - Bränsletyp: {FuelType}";
         return $"Bränsletyp: {FuelType}";
     }
 }

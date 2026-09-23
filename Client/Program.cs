@@ -14,11 +14,13 @@ class Program
         volvo.Mileage = 105000;
         volvo.Engine = new Engine{FuelType="Diesel", HorsePower=200, Volume=2.0};
 
-        Car peugeot = new Car("Peugeot", "3008", "DEF38P");
-        peugeot.ModelYear= 2025;
-        peugeot.Color = "Blue";
-        peugeot.Mileage = 50000;
-        peugeot.Engine = new Engine{FuelType="Petrol"};
+        Car peugeot = new Car("Peugeot", "3008", "DEF38P")
+        {
+            ModelYear= 2025,
+            Color = "Blue",
+            Mileage = 50000,
+            Engine = new Engine{FuelType="Petrol", HorsePower=200}
+        };
 
         CarPark carPark = new CarPark();
         
@@ -31,15 +33,18 @@ class Program
         ElCycle.NumberOfGears = 7;
         ElCycle.WheelSize = "28 inches";
 
-        Bike DamCycle = new Bike("Nishiki", "Pro SLD");
-        DamCycle.CycleType = "Manual";
-        DamCycle.ModelYear = 2023;
-        DamCycle.NumberOfGears = 0;
-        DamCycle.WheelSize = "27 inches";
+        Bike DamCycle = new Bike("Nishiki", "Pro SLD")
+            {
+                CycleType = "Manual",
+                ModelYear = 2023,
+                NumberOfGears = 0,
+                WheelSize = "27 inches"
+            };
 
         carPark.vehicles.Add(ElCycle);
         carPark.vehicles.Add(DamCycle);
 
+        Console.WriteLine(peugeot);
         //Console.WriteLine(volvo.ToString());
         Console.WriteLine("-------------------------------");
 
